@@ -1,0 +1,21 @@
+Test Cases - Emergency service management system:
+
+1. Standard Call Handling
+   - Action: Receive three "Low" priority calls (IDs: 101, 102, 103).
+   - Expected Result: Calls are queued in the order they arrive (101, then 102, then 103).
+
+2. Priority Call Handling
+   - Action: Receive a "Low" priority call (101), followed by a "High" priority call (102).
+   - Expected Result: Call 102 is placed at the front of the queue, ahead of Call 101.
+
+3. Vehicle Dispatch
+   - Action: Dispatch a vehicle to the waiting calls.
+   - Expected Result: The vehicle is assigned to the call at the front of the queue (the highest priority or oldest call).
+
+4. Undo Last Dispatch
+   - Action: Undo the most recent dispatch.
+   - Expected Result: The vehicle is recalled, and the call is returned to the front of the queue.
+
+5. Empty Queue Handling
+   - Action: Attempt to dispatch a vehicle when no calls are waiting.
+   - Expected Result: The system displays a message indicating no pending calls.
